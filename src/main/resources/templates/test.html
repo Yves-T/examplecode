@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Hello WebSocket</title>
+    <link rel="stylesheet" th:href="@{/js/semantic-ui/build/packaged/css/semantic.min.css}"
+          href="../..js/semantic-ui/build/packaged/css/semantic.min.css"/>
+
+</head>
+<body ng-app="myApp">
+<div ng-controller="weatherController">
+    Temperature: <a ng-class="{true:'ui circular label black',false:'ui circular label red'}[temperature > 0]">{{temperature}}</a>
+
+    <h2 class="ui header">
+        <i class="settings icon"></i>
+
+        <div class="content">
+            Ideas {{temperature}}
+            <div class="sub header">View all posted ideas</div>
+        </div>
+    </h2>
+</div>
+<script th:src="@{/js/sockjs/sockjs.js}" src="../../js/sockjs/sockjs.js"></script>
+<script th:src="@{/js/angular/angular.min.js}" src="../../js/angular/angular.min.js"></script>
+<script th:src="@{/js//stomp-websocket/lib/stomp.min.js}" src="../../js//stomp-websocket/lib/stomp.min.js"></script>
+<script th:src="@{/js/angular-resource/angular-resource.min.js}"
+        src="../../js/angular-resource/angular-resource.min.js"></script>
+<script th:src="@{/js/app/app.js}" src="../../js/app/app.js"></script>
+<script th:src="@{/js/app/controllers.js}" src="../../js/app/controllers.js"></script>
+<script type="text/javascript">
+</script>
+</body>
+</html>
